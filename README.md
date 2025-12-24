@@ -9,7 +9,7 @@
 
 ### Image Screen shots
 
-Registration Page
+Registration Page gg
 
 ![Registration Page](img/signup.png "Registration Page")
 
