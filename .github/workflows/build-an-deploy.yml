@@ -25,12 +25,13 @@ jobs:
 
       # Build and SonarQube analysis
       - name: Build and analyze
+        shell: cmd
         run: mvn -B verify sonar:sonar -Dsonar.project.settings=./sonar-project.properties
 
       # Build Docker image
       - name: Build Docker image
-        run: |
-          docker build -t carikk/quality-gate:latest .
+        shell: cmd
+        run: docker build -t carikk/quality-gate:latest .
 
       # OPTIONNEL : Push Docker image only if you have Docker Hub credentials
       # Uncomment these lines only if you have set DOCKER_USERNAME and DOCKER_PASSWORD secrets
