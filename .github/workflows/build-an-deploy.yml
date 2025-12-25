@@ -26,7 +26,7 @@ jobs:
       # Build and SonarQube analysis
       - name: Build and analyze
         shell: cmd
-        run: mvn -B verify sonar:sonar -Dsonar.project.settings=./sonar-project.properties
+        run: mvn -B verify sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.token=squ_06c9024c162e8d39c797af21dfc44530e9fd10f8
 
       # Build Docker image
       - name: Build Docker image
